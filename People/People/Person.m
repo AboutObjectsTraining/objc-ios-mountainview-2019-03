@@ -14,6 +14,10 @@
 //}
 
 
++ (instancetype)personWithFirstName:(NSString *)firstName lastName:(NSString *)lastName {
+    return [[self alloc] initWithFirstName:firstName lastName:lastName];
+}
+
 // Convenience initializer
 - (instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName {
     return [self initWithFirstName:firstName lastName:lastName age:0];
@@ -30,29 +34,8 @@
     return self;
 }
 
-- (NSString *)firstName {
-    return _firstName;
-}
-- (void)setFirstName:(NSString *)newValue {
-    _firstName = [newValue copy];
-}
-
-- (NSString *)lastName {
-    return _lastName;
-}
-- (void)setLastName:(NSString *)newValue {
-    _lastName = [newValue copy];
-}
-
 - (NSString *)fullName {
     return [NSString stringWithFormat:@"%@ %@", [self firstName], [self lastName]];
-}
-
-- (NSUInteger)age {
-    return _age;
-}
-- (void)setAge:(NSUInteger)newValue {
-    _age = newValue;
 }
 
 - (NSString *)description

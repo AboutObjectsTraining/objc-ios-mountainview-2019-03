@@ -4,23 +4,23 @@
 #import <Foundation/Foundation.h>
 
 @interface Person : NSObject
-{
-    NSString *_firstName;
-    NSString *_lastName;
-    NSUInteger _age;
-}
 
 - (instancetype)initWithFirstName:(NSString *)firstName
                          lastName:(NSString *)lastName
                               age:(NSUInteger)age;
 
-- (NSString *)firstName;
-- (void)setFirstName:(NSString *)newValue;
+@property (nonatomic, copy) NSString *firstName;
+@property (nonatomic, copy) NSString *lastName;
+@property (nonatomic, readonly) NSString *fullName;
+@property (nonatomic, assign) NSUInteger age;
 
-- (NSString *)lastName;
-- (void)setLastName:(NSString *)newValue;
-
-- (NSUInteger)age;
-- (void)setAge:(NSUInteger)newValue;
+//- (NSString *)firstName;
+//- (void)setFirstName:(NSString *)newValue;
+//
+//- (NSString *)lastName;
+//- (void)setLastName:(NSString *)newValue;
+//
+//- (NSUInteger)age;
+//- (void)setAge:(NSUInteger)newValue;
 
 @end

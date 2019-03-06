@@ -22,8 +22,8 @@
     Person *person = [[Person alloc] initWithFirstName:@"Fred" lastName:@"Smith" age:32];
     NSLog(@"%@", person);
     
-    Person *clone = [person copy];
-    NSLog(@"%@", clone);
+//    Person *clone = [person copy];
+//    NSLog(@"%@", clone);
 }
 
 - (void)testNSString {

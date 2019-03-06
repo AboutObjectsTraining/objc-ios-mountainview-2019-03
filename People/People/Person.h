@@ -5,6 +5,10 @@
 
 @interface Person : NSObject
 
++ (instancetype)personWithFirstName:(NSString *)firstName lastName:(NSString *)lastName;
+
+- (instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName;
+
 - (instancetype)initWithFirstName:(NSString *)firstName
                          lastName:(NSString *)lastName
                               age:(NSUInteger)age;
@@ -13,14 +17,5 @@
 @property (nonatomic, copy) NSString *lastName;
 @property (nonatomic, readonly) NSString *fullName;
 @property (nonatomic, assign) NSUInteger age;
-
-//- (NSString *)firstName;
-//- (void)setFirstName:(NSString *)newValue;
-//
-//- (NSString *)lastName;
-//- (void)setLastName:(NSString *)newValue;
-//
-//- (NSUInteger)age;
-//- (void)setAge:(NSUInteger)newValue;
 
 @end

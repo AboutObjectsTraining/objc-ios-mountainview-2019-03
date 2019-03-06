@@ -5,15 +5,7 @@
 
 @implementation Person
 
-//- (instancetype)initWithFoo:(NSString *)foo {
-//    if (!(self = [super init])) return nil;
-//
-//    <#// Initialization code#>
-//
-//    return self;
-//}
-
-
+// Factory method
 + (instancetype)personWithFirstName:(NSString *)firstName lastName:(NSString *)lastName {
     return [[self alloc] initWithFirstName:firstName lastName:lastName];
 }

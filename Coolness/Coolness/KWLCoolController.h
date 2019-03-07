@@ -1,8 +1,12 @@
 // Copyright (C) 2019 About Objects, Inc. All Rights Reserved.
 // See LICENSE.txt for this project's licensing information.
 
-#import "AppDelegate.h"
+#import <UIKit/UIKit.h>
 
-@implementation AppDelegate
+NS_ASSUME_NONNULL_BEGIN
+
+@interface KWLCoolController : UIViewController
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4E754682230419500A2EFA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E754672230419500A2EFA4 /* AppDelegate.m */; };
+		B4E754682230419500A2EFA4 /* KWLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E754672230419500A2EFA4 /* KWLAppDelegate.m */; };
 		B4E754702230419700A2EFA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E7546F2230419700A2EFA4 /* Assets.xcassets */; };
 		B4E754732230419700A2EFA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E754712230419700A2EFA4 /* LaunchScreen.storyboard */; };
 		B4E754762230419700A2EFA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E754752230419700A2EFA4 /* main.m */; };
+		B4E7547E2230600100A2EFA4 /* KWLCoolController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E7547D2230600100A2EFA4 /* KWLCoolController.m */; };
+		B4E7548122307D7900A2EFA4 /* KWLCoolViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E7548022307D7900A2EFA4 /* KWLCoolViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B4E754632230419500A2EFA4 /* Coolness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coolness.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E754662230419500A2EFA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B4E754672230419500A2EFA4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B4E754662230419500A2EFA4 /* KWLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWLAppDelegate.h; sourceTree = "<group>"; };
+		B4E754672230419500A2EFA4 /* KWLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWLAppDelegate.m; sourceTree = "<group>"; };
 		B4E7546F2230419700A2EFA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E754722230419700A2EFA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4E754742230419700A2EFA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4E754752230419700A2EFA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4E7547C2230600100A2EFA4 /* KWLCoolController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWLCoolController.h; sourceTree = "<group>"; };
+		B4E7547D2230600100A2EFA4 /* KWLCoolController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWLCoolController.m; sourceTree = "<group>"; };
+		B4E7547F22307D7900A2EFA4 /* KWLCoolViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWLCoolViewCell.h; sourceTree = "<group>"; };
+		B4E7548022307D7900A2EFA4 /* KWLCoolViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWLCoolViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +59,12 @@
 		B4E754652230419500A2EFA4 /* Coolness */ = {
 			isa = PBXGroup;
 			children = (
-				B4E754662230419500A2EFA4 /* AppDelegate.h */,
-				B4E754672230419500A2EFA4 /* AppDelegate.m */,
+				B4E754662230419500A2EFA4 /* KWLAppDelegate.h */,
+				B4E754672230419500A2EFA4 /* KWLAppDelegate.m */,
+				B4E7547C2230600100A2EFA4 /* KWLCoolController.h */,
+				B4E7547D2230600100A2EFA4 /* KWLCoolController.m */,
+				B4E7547F22307D7900A2EFA4 /* KWLCoolViewCell.h */,
+				B4E7548022307D7900A2EFA4 /* KWLCoolViewCell.m */,
 				B4E7546F2230419700A2EFA4 /* Assets.xcassets */,
 				B4E754712230419700A2EFA4 /* LaunchScreen.storyboard */,
 				B4E754742230419700A2EFA4 /* Info.plist */,
@@ -132,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E7547E2230600100A2EFA4 /* KWLCoolController.m in Sources */,
 				B4E754762230419700A2EFA4 /* main.m in Sources */,
-				B4E754682230419500A2EFA4 /* AppDelegate.m in Sources */,
+				B4E7548122307D7900A2EFA4 /* KWLCoolViewCell.m in Sources */,
+				B4E754682230419500A2EFA4 /* KWLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

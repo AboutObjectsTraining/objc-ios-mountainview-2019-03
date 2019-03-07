@@ -2,10 +2,10 @@
 // See LICENSE.txt for this project's licensing information.
 
 #import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+#import "KWLAppDelegate.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([KWLAppDelegate class]));
     }
 }

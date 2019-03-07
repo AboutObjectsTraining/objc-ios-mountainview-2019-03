@@ -40,6 +40,43 @@ const CGPoint KWLTextOrigin = { .x = 12, .y = 7 };
     self.layer.masksToBounds = YES;
 }
 
+- (void)setHighlighted:(BOOL)highlighted {
+    self.alpha = highlighted ? 0.5 : 1.0;
+    _highlighted = highlighted;
+}
+
+- (void)setText:(NSString *)text {
+    _text = [text copy];
+    [self sizeToFit];
+}
+
+// MARK: - Drawing and resizing
+
+- (CGSize)sizeThatFits:(CGSize)size {
+    CGSize newSize = [self.text sizeWithAttributes:self.class.textAttributes];
+    newSize.width += KWLTextInsets.left + KWLTextInsets.right;
+    newSize.height += KWLTextInsets.top + KWLTextInsets.bottom;
+    return newSize;
+}
+
++ (NSDictionary *)textAttributes {
+    static NSDictionary *attributes;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        attributes = @{ NSFontAttributeName : [UIFont boldSystemFontOfSize:18],
+                        NSForegroundColorAttributeName : UIColor.whiteColor };
+    });
+    return attributes;
+//    return @{ NSFontAttributeName : [UIFont boldSystemFontOfSize:20],
+//              NSForegroundColorAttributeName : UIColor.whiteColor };
+}
+
+- (void)drawRect:(CGRect)rect {
+    [self.text drawAtPoint:KWLTextOrigin withAttributes:self.class.textAttributes];
+}
+
+// MARK: - Animation
+
 - (void)bounce {
     NSLog(@"In %s", __func__);
     [self animateBounceWithDuration:1.0 size:CGSizeMake(120.0, 240.0)];
@@ -63,40 +100,6 @@ const CGPoint KWLTextOrigin = { .x = 12, .y = 7 };
     [UIView animateWithDuration:duration
                      animations:^{ [self configureBounceWithSize:size]; }
                      completion:^(BOOL done) { [self animateFinalBounceWithDuration:duration]; }];
-}
-
-
-- (void)setHighlighted:(BOOL)highlighted {
-    self.alpha = highlighted ? 0.5 : 1.0;
-    _highlighted = highlighted;
-}
-
-- (void)setText:(NSString *)text {
-    _text = [text copy];
-    [self sizeToFit];
-}
-
-- (CGSize)sizeThatFits:(CGSize)size {
-    CGSize newSize = [self.text sizeWithAttributes:self.class.textAttributes];
-    newSize.width += KWLTextInsets.left + KWLTextInsets.right;
-    newSize.height += KWLTextInsets.top + KWLTextInsets.bottom;
-    return newSize;
-}
-
-+ (NSDictionary *)textAttributes {
-    static NSDictionary *attributes;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        attributes = @{ NSFontAttributeName : [UIFont boldSystemFontOfSize:18],
-                        NSForegroundColorAttributeName : UIColor.whiteColor };
-    });
-    return attributes;
-//    return @{ NSFontAttributeName : [UIFont boldSystemFontOfSize:20],
-//              NSForegroundColorAttributeName : UIColor.whiteColor };
-}
-
-- (void)drawRect:(CGRect)rect {
-    [self.text drawAtPoint:KWLTextOrigin withAttributes:self.class.textAttributes];
 }
 
 @end

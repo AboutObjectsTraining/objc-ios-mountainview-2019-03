@@ -4,7 +4,7 @@
 #import "KWLCoolController.h"
 #import "KWLCoolViewCell.h"
 
-@interface KWLCoolController ()
+@interface KWLCoolController () <UITextFieldDelegate>
 
 @property (nonatomic, weak) UITextField *textField;
 @property (nonatomic, weak) UIView *contentView;
@@ -18,6 +18,11 @@
     KWLCoolViewCell *newCell = [[KWLCoolViewCell alloc] init];
     newCell.text = self.textField.text;
     [self.contentView addSubview:newCell];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)loadView {
@@ -48,6 +53,8 @@
     textField.placeholder = @"Enter some text";
     
     self.textField = textField;
+    self.textField.delegate = self;
+    
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     [accessoryView addSubview:button];

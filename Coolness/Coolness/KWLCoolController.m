@@ -4,7 +4,21 @@
 #import "KWLCoolController.h"
 #import "KWLCoolViewCell.h"
 
+@interface KWLCoolController ()
+
+@property (nonatomic, weak) UITextField *textField;
+@property (nonatomic, weak) UIView *contentView;
+
+@end
+
 @implementation KWLCoolController
+
+- (void)addCell {
+    NSLog(@"In %s, text is %@", __func__, self.textField.text);
+    KWLCoolViewCell *newCell = [[KWLCoolViewCell alloc] init];
+    newCell.text = self.textField.text;
+    [self.contentView addSubview:newCell];
+}
 
 - (void)loadView {
     self.view = [[UIView alloc] initWithFrame:UIScreen.mainScreen.bounds];
@@ -21,8 +35,30 @@
     
     contentView.clipsToBounds = YES;
     
+    self.contentView = contentView;
+    
     accessoryView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     contentView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    
+    // Controls
+    
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(15, 52, 260, 30)];
+    [accessoryView addSubview:textField];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.placeholder = @"Enter some text";
+    
+    self.textField = textField;
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [accessoryView addSubview:button];
+    [button setTitle:@"Add" forState:UIControlStateNormal];
+    [button sizeToFit];
+    button.frame = CGRectOffset(button.frame, 285, 52);
+    
+    [button addTarget:self action:@selector(addCell) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    // Cool View Cells
     
     KWLCoolViewCell *subview1 = [[KWLCoolViewCell alloc] initWithFrame:CGRectMake(20, 20, 240, 40)];
     KWLCoolViewCell *subview2 = [[KWLCoolViewCell alloc] initWithFrame:CGRectMake(50, 90, 240, 40)];

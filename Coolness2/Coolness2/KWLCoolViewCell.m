@@ -6,10 +6,12 @@
 const UIEdgeInsets KWLTextInsets = { .top = 7, .left = 12, .bottom = 8, .right = 12 };
 const CGPoint KWLTextOrigin = { .x = 12, .y = 7 };
 
+IB_DESIGNABLE
 @interface KWLCoolViewCell ()
 
 @property (nonatomic, getter=isHighlighted) BOOL highlighted;
 @property (class, nonatomic, readonly) NSDictionary *textAttributes;
+@property (nonatomic) IBInspectable CGFloat borderWidth;
 
 @end
 
@@ -25,7 +27,19 @@ const CGPoint KWLTextOrigin = { .x = 12, .y = 7 };
     return self;
 }
 
-// FIXME: Implement the other designated initializer!
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (!(self = [super initWithCoder:aDecoder])) return nil;
+    
+    [self configureLayer];
+    [self configureGestureRecognizers];
+    
+    return self;
+}
+
+- (void)prepareForInterfaceBuilder {
+    [super prepareForInterfaceBuilder];
+    self.layer.masksToBounds = YES;
+}
 
 - (void)configureGestureRecognizers {
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bounce)];
@@ -38,6 +52,13 @@ const CGPoint KWLTextOrigin = { .x = 12, .y = 7 };
     self.layer.borderColor = UIColor.whiteColor.CGColor;
     self.layer.cornerRadius = 10.0;
     self.layer.masksToBounds = YES;
+}
+
+- (CGFloat)borderWidth {
+    return self.layer.borderWidth;
+}
+- (void)setBorderWidth:(CGFloat)borderWidth {
+    self.layer.borderWidth = borderWidth;
 }
 
 - (void)setHighlighted:(BOOL)highlighted {

@@ -12,8 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KWLCoolController">
             <connections>
-                <outlet property="contentView" destination="N4L-Pg-Sgl" id="i76-O0-bcy"/>
-                <outlet property="textField" destination="aNn-MF-37t" id="BgV-Ls-nWA"/>
                 <outlet property="view" destination="wGW-9f-Sn3" id="oeW-m1-9eo"/>
             </connections>
         </placeholder>
@@ -22,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dW-nO-SqL" userLabel="Accessory View">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dW-nO-SqL" userLabel="Accessory View" customClass="KWLAccessoryView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter some text" textAlignment="natural" minimumFontSize="13" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aNn-MF-37t">
@@ -34,7 +32,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="-1" id="gMB-Bn-qIp"/>
+                                <outlet property="delegate" destination="9dW-nO-SqL" id="crO-pq-f3o"/>
                             </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eh6-9B-V2t">
@@ -45,7 +43,7 @@
                             </constraints>
                             <state key="normal" title="Add"/>
                             <connections>
-                                <action selector="addCell" destination="-1" eventType="touchUpInside" id="CBy-6b-cZo"/>
+                                <action selector="addCell" destination="N4L-Pg-Sgl" eventType="touchUpInside" id="CoI-dX-nM6"/>
                             </connections>
                         </button>
                     </subviews>
@@ -59,9 +57,33 @@
                         <constraint firstItem="eh6-9B-V2t" firstAttribute="leading" secondItem="aNn-MF-37t" secondAttribute="trailing" constant="8" id="xKa-HA-on9"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4L-Pg-Sgl" userLabel="Content View">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4L-Pg-Sgl" userLabel="Content View" customClass="KWLCoolView">
                     <rect key="frame" x="0.0" y="130" width="375" height="682"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OEl-2r-cuy" customClass="KWLCoolViewCell">
+                            <rect key="frame" x="44" y="56" width="141" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="Cell Cells Rock! 😎"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="obu-Uc-dfx" customClass="KWLCoolViewCell">
+                            <rect key="frame" x="81" y="111" width="141" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="IB Is Awesome! 🎉🏆"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="textField" destination="aNn-MF-37t" id="ORZ-iP-HNj"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

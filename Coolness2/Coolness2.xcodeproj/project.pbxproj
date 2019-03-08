@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B464001A2232F256002477CE /* KWLCoolView.m in Sources */ = {isa = PBXBuildFile; fileRef = B46400192232F256002477CE /* KWLCoolView.m */; };
+		B464001D2232FB45002477CE /* KWLAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = B464001C2232FB45002477CE /* KWLAccessoryView.m */; };
 		B4E754982231E75200A2EFA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E754972231E75200A2EFA4 /* Assets.xcassets */; };
 		B4E7549B2231E75200A2EFA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E754992231E75200A2EFA4 /* LaunchScreen.storyboard */; };
 		B4E7549E2231E75200A2EFA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E7549D2231E75200A2EFA4 /* main.m */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B46400182232F256002477CE /* KWLCoolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWLCoolView.h; sourceTree = "<group>"; };
+		B46400192232F256002477CE /* KWLCoolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWLCoolView.m; sourceTree = "<group>"; };
+		B464001B2232FB45002477CE /* KWLAccessoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWLAccessoryView.h; sourceTree = "<group>"; };
+		B464001C2232FB45002477CE /* KWLAccessoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWLAccessoryView.m; sourceTree = "<group>"; };
 		B4E7548B2231E75100A2EFA4 /* Coolness2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coolness2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E754972231E75200A2EFA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E7549A2231E75200A2EFA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +71,10 @@
 				B4E754AF2231E8D900A2EFA4 /* KWLAppDelegate.m */,
 				B4E754AE2231E8D900A2EFA4 /* KWLCoolController.h */,
 				B4E754B22231E8D900A2EFA4 /* KWLCoolController.m */,
+				B464001B2232FB45002477CE /* KWLAccessoryView.h */,
+				B464001C2232FB45002477CE /* KWLAccessoryView.m */,
+				B46400182232F256002477CE /* KWLCoolView.h */,
+				B46400192232F256002477CE /* KWLCoolView.m */,
 				B4E754B62231EA1600A2EFA4 /* CoolStuff.xib */,
 				B4E754B12231E8D900A2EFA4 /* KWLCoolViewCell.h */,
 				B4E754AD2231E8D900A2EFA4 /* KWLCoolViewCell.m */,
@@ -148,6 +158,8 @@
 			files = (
 				B4E754B32231E8D900A2EFA4 /* KWLCoolViewCell.m in Sources */,
 				B4E754B52231E8D900A2EFA4 /* KWLCoolController.m in Sources */,
+				B464001D2232FB45002477CE /* KWLAccessoryView.m in Sources */,
+				B464001A2232F256002477CE /* KWLCoolView.m in Sources */,
 				B4E7549E2231E75200A2EFA4 /* main.m in Sources */,
 				B4E754B42231E8D900A2EFA4 /* KWLAppDelegate.m in Sources */,
 			);

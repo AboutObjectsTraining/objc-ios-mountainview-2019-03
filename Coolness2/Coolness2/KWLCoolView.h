@@ -5,9 +5,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KWLCoolViewCell : UIView
-
-@property (nonatomic, copy) IBInspectable NSString *text;
+@interface KWLCoolView : UIView
 
 @end
 

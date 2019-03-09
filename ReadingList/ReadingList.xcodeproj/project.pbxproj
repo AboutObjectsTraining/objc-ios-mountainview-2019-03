@@ -22,6 +22,7 @@
 		B464005A223333AB002477CE /* RLMModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B4640050223333AB002477CE /* RLMModelObject.m */; };
 		B464005B223333AB002477CE /* RLMBook.m in Sources */ = {isa = PBXBuildFile; fileRef = B4640052223333AB002477CE /* RLMBook.m */; };
 		B464005E22333D64002477CE /* RELDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B464005D22333D64002477CE /* RELDataSource.m */; };
+		B464006122334E27002477CE /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B464005F22334E27002477CE /* Edit.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		B4640054223333AB002477CE /* RLMReadingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLMReadingList.h; sourceTree = "<group>"; };
 		B464005C22333D64002477CE /* RELDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RELDataSource.h; sourceTree = "<group>"; };
 		B464005D22333D64002477CE /* RELDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RELDataSource.m; sourceTree = "<group>"; };
+		B464006022334E27002477CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ReadingList/Base.lproj/Edit.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		B464001E22331005002477CE = {
 			isa = PBXGroup;
 			children = (
+				B464005F22334E27002477CE /* Edit.storyboard */,
 				B46400462233333F002477CE /* ReadingListModel */,
 				B464002922331005002477CE /* ReadingList */,
 				B464002822331005002477CE /* Products */,
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B464003722331005002477CE /* LaunchScreen.storyboard in Resources */,
+				B464006122334E27002477CE /* Edit.storyboard in Resources */,
 				B4640056223333AB002477CE /* ReadingList.plist in Resources */,
 				B464003422331005002477CE /* Assets.xcassets in Resources */,
 				B464003222331005002477CE /* Main.storyboard in Resources */,
@@ -226,6 +230,14 @@
 				B464003622331005002477CE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B464005F22334E27002477CE /* Edit.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B464006022334E27002477CE /* Base */,
+			);
+			name = Edit.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
